@@ -26,22 +26,13 @@ public class JogadorComp : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
-        //Invoke("FreezeY", 2.0f);
-	}
+  	}
 
     void Update() {
         float velocidadeHorizontal = Input.GetAxis("Horizontal") * velocidadeEsquiva;
         rb.AddForce(velocidadeHorizontal, 0, velocidadeRolamento);
     }
 
-    // Update is called once per frame
-    void FixedUpdate () {
-        
-	}
-
-    private void FreezeY() {
-        rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationY;
-    }
 
     
 }
