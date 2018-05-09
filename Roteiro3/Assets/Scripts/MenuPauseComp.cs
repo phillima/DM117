@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+<<<<<<< HEAD
 using UnityEngine.SceneManagement;
+=======
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
 
 public class MenuPauseComp : MonoBehaviour {
 
     public static bool pausado;
 
+<<<<<<< HEAD
     [SerializeField]
     private GameObject menuPausePanel;
 
@@ -42,4 +46,15 @@ public class MenuPauseComp : MonoBehaviour {
         SetPauseMenu(false);
     }
 
+=======
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
 }

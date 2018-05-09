@@ -179,6 +179,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+<<<<<<< HEAD
 --- !u!1 &237820598
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,6 +254,8 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 237820598}
+=======
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
 --- !u!1 &282840810
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +355,11 @@ GameObject:
   - component: {fileID: 351917783}
   - component: {fileID: 351917786}
   m_Layer: 5
+<<<<<<< HEAD
   m_Name: Reiniciar
+=======
+  m_Name: Button (1)
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -372,10 +379,17 @@ RectTransform:
   m_Father: {fileID: 1879427557}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 82.625, y: -109.7}
   m_SizeDelta: {x: 155.25, y: 30}
+=======
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 30}
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &351917783
 MonoBehaviour:
@@ -415,6 +429,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 351917784}
   m_OnClick:
     m_PersistentCalls:
+<<<<<<< HEAD
       m_Calls:
       - m_Target: {fileID: 1001986109}
         m_MethodName: Restart
@@ -427,6 +442,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+      m_Calls: []
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &351917784
@@ -517,9 +535,15 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
+<<<<<<< HEAD
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -582.75, y: 0}
+=======
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &581442336
 MonoBehaviour:
@@ -597,10 +621,17 @@ RectTransform:
   m_Father: {fileID: 351917782}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 77.625, y: -15}
   m_SizeDelta: {x: 145.25, y: 20}
+=======
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &667543202
 MonoBehaviour:
@@ -641,6 +672,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 667543200}
+<<<<<<< HEAD
 --- !u!1 &680931827
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,6 +806,8 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 680931827}
+=======
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
 --- !u!1 &705752333
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,10 +838,17 @@ RectTransform:
   m_Father: {fileID: 1879427557}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 82.625, y: -29.85}
   m_SizeDelta: {x: 155.25, y: 49.7}
+=======
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 49.7}
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &705752335
 MonoBehaviour:
@@ -861,7 +902,11 @@ GameObject:
   - component: {fileID: 997460313}
   - component: {fileID: 997460316}
   m_Layer: 5
+<<<<<<< HEAD
   m_Name: MenuPrincipal
+=======
+  m_Name: Button (2)
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -881,10 +926,17 @@ RectTransform:
   m_Father: {fileID: 1879427557}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 82.625, y: -144.7}
   m_SizeDelta: {x: 155.25, y: 30}
+=======
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 30}
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &997460313
 MonoBehaviour:
@@ -924,6 +976,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 997460314}
   m_OnClick:
     m_PersistentCalls:
+<<<<<<< HEAD
       m_Calls:
       - m_Target: {fileID: 1001986109}
         m_MethodName: CarregaScene
@@ -936,6 +989,9 @@ MonoBehaviour:
           m_StringArgument: TelaInicial
           m_BoolArgument: 0
         m_CallState: 2
+=======
+      m_Calls: []
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &997460314
@@ -993,6 +1049,7 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+<<<<<<< HEAD
 --- !u!1 &1001986108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,6 +1091,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
 --- !u!1 &1090420651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,7 +1179,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1194415336}
+<<<<<<< HEAD
   - {fileID: 680931828}
+=======
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1142,7 +1204,11 @@ GameObject:
   - component: {fileID: 1107623693}
   - component: {fileID: 1107623696}
   m_Layer: 5
+<<<<<<< HEAD
   m_Name: Resumir
+=======
+  m_Name: Button
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1162,10 +1228,17 @@ RectTransform:
   m_Father: {fileID: 1879427557}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 82.625, y: -74.7}
   m_SizeDelta: {x: 155.25, y: 30}
+=======
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 30}
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1107623693
 MonoBehaviour:
@@ -1205,6 +1278,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1107623694}
   m_OnClick:
     m_PersistentCalls:
+<<<<<<< HEAD
       m_Calls:
       - m_Target: {fileID: 1001986109}
         m_MethodName: SetPauseMenu
@@ -1228,6 +1302,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+=======
+      m_Calls: []
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1107623694
@@ -1345,7 +1422,11 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< HEAD
   m_IsActive: 0
+=======
+  m_IsActive: 1
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
 --- !u!224 &1194415336
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1470,10 +1551,17 @@ RectTransform:
   m_Father: {fileID: 1107623692}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 77.625, y: -15}
   m_SizeDelta: {x: 145.25, y: 20}
+=======
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1495366603
 MonoBehaviour:
@@ -1611,10 +1699,17 @@ RectTransform:
   m_Father: {fileID: 997460312}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 77.625, y: -15}
   m_SizeDelta: {x: 145.25, y: 20}
+=======
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1778704939
 MonoBehaviour:
@@ -1694,7 +1789,11 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
+<<<<<<< HEAD
   m_SizeDelta: {x: 15.25, y: -135.3}
+=======
+  m_SizeDelta: {x: 0, y: 0}
+>>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1879427558
 MonoBehaviour:
