@@ -52,14 +52,11 @@ public class JogadorComp : MonoBehaviour {
     }
 
     void Update() {
-<<<<<<< HEAD
 
         //O jogo esta pausado. Nao atualize
         if (MenuPauseComp.pausado)
             return;
 
-=======
->>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
         //Detectando uso das teclas A e D
         float velocidadeHorizontal = Input.GetAxis("Horizontal") * velocidadeEsquiva;
 
@@ -84,7 +81,6 @@ public class JogadorComp : MonoBehaviour {
             }
         }
 #endif
-<<<<<<< HEAD
 
         var forcaMovimento = new Vector3(velocidadeHorizontal, 0, velocidadeRolamento);
 
@@ -93,11 +89,6 @@ public class JogadorComp : MonoBehaviour {
         forcaMovimento *= (Time.deltaTime * 60);
 
         rb.AddForce(forcaMovimento);
-=======
-       
-
-        rb.AddForce(velocidadeHorizontal, 0, velocidadeRolamento);
->>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
     }
 
     private float CalculaMovimento(Vector2 screenSpacePos) {
@@ -163,10 +154,6 @@ public class JogadorComp : MonoBehaviour {
 
         if (Physics.Raycast(posicaoTelaRay, out hit)) {
             hit.transform.SendMessage("ObjetoTocado", SendMessageOptions.DontRequireReceiver);
-<<<<<<< HEAD
-=======
-            print(hit.transform.name);
->>>>>>> d776b4c1c2a639d62c5691788c2a12c5e083cabe
         }
     }
 }
