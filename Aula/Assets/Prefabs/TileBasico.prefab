@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 4043477349963692}
   - component: {fileID: 65428201655133094}
   - component: {fileID: 114282444495973072}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: FimTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
