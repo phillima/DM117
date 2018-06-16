@@ -6,6 +6,8 @@ public class Bloco : MonoBehaviour {
 
     [SerializeField]
     private Sprite[] sprites;
+    [SerializeField]
+    private ParticleSystem explosion;
 
     public static int numBlocosDestrutivel = 0;
 
@@ -31,6 +33,7 @@ public class Bloco : MonoBehaviour {
         if (transform.CompareTag("Destrutivel")){
             AudioSource.PlayClipAtPoint(audioSource.clip,
                         transform.position);
+            EfeitoExplosao();
             TratarDano();
         }
     }
@@ -52,5 +55,13 @@ public class Bloco : MonoBehaviour {
         if (sprites[spriteIndex]) {
             spriteRenderer.sprite = sprites[spriteIndex];
         }
+    }
+
+    private void EfeitoExplosao() {
+        ParticleSystem ps = Instantiate(explosion,transform.position,
+                            Quaternion.identity);
+        ParticleSystem.MainModule main = ps.main;
+        main.startColor = spriteRenderer.color;
+
     }
 }

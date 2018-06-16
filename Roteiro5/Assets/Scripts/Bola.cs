@@ -9,7 +9,10 @@ public class Bola : MonoBehaviour {
     private Rigidbody2D rb2D;
 
     private bool jogoComecou = false;
-
+    public bool JogoComecou {
+        get {
+            return jogoComecou;
+        }}
     private Vector3 plataformaBolaDis;
 
     private AudioSource audioSource;
@@ -36,6 +39,11 @@ public class Bola : MonoBehaviour {
 	}
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        audioSource.Play();
+        if (jogoComecou) {
+            Vector2 velocidadeAjuste =
+            new Vector2(Random.Range(0f, 0.5f), 0);
+            rb2D.velocity += velocidadeAjuste;
+            audioSource.Play();
+        }
     }
 }
