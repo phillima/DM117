@@ -21,10 +21,10 @@ GameObject:
   - component: {fileID: 4932743493010534}
   - component: {fileID: 212438873769857416}
   - component: {fileID: 61109820779818846}
-  - component: {fileID: 114527153850310982}
+  - component: {fileID: 114692657925900272}
   m_Layer: 0
-  m_Name: bloco_2
-  m_TagString: Destrutivel
+  m_Name: bloco_ind
+  m_TagString: Indestrutivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,7 +67,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.3203125}
   m_EdgeRadius: 0
---- !u!114 &114527153850310982
+--- !u!114 &114692657925900272
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -78,8 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e84d1375ad8e8b74dae069c841cf1649, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: 21300008, guid: a9d1f94b173aeba44918a87a34bd6609, type: 3}
+  sprites: []
 --- !u!212 &212438873769857416
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -116,7 +115,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a9d1f94b173aeba44918a87a34bd6609, type: 3}
-  m_Color: {r: 1, g: 0.16001588, b: 0, a: 1}
+  m_Color: {r: 0.31701672, g: 0.33654293, b: 0.49056602, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

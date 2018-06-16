@@ -11,7 +11,7 @@ public class GameOver : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        levelControle.CarregaLevel("TelaVitoria");
+        levelControle.CarregaLevel("TelaGameOver");
     }
 
 }

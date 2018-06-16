@@ -12,10 +12,13 @@ public class Bola : MonoBehaviour {
 
     private Vector3 plataformaBolaDis;
 
+    private AudioSource audioSource;
+
 	// Use this for initialization
 	void Start () {
         rb2D = GetComponent<Rigidbody2D>();
         plataforma = FindObjectOfType<Plataforma>();
+        audioSource = GetComponent<AudioSource>();
         plataformaBolaDis = transform.position -
                     plataforma.transform.position;
 	}
@@ -30,7 +33,9 @@ public class Bola : MonoBehaviour {
                 jogoComecou = true;
             }
         }
-
-        
 	}
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        audioSource.Play();
+    }
 }
