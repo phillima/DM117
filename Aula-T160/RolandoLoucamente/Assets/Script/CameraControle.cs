@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class CameraControle : MonoBehaviour {
 
+    [SerializeField]
     JogadorControle jogador;
  
     Vector3 offset;
 
 	// Use this for initialization
 	void Start () {
-
-        jogador = FindObjectOfType<JogadorControle>();
-        offset = jogador.transform.position - transform.position;
+        offset = jogador.transform.position 
+            - transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(jogador != null) {
+            transform.position =
+                jogador.transform.position - offset;
+        }
 	}
 }
