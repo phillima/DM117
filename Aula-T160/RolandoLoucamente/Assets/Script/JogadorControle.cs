@@ -52,6 +52,9 @@ public class JogadorControle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (MenuPause.isPausado) {
+            return;
+        }
         //var direcaoHorizontal =
         //    Input.GetAxis("Horizontal");
         var direcaoHorizontal = 0.0f;
@@ -92,10 +95,15 @@ public class JogadorControle : MonoBehaviour {
                 SwipeTeleport(toque);
             }
         }
-//#endif
-        jogadorRB.AddForce(velocidadeEsquiva*direcaoHorizontal,
-                    0,
-                    velocidadeRolamento);
+        //#endif
+
+        //Usando o time.DeltaTime
+
+        float constante = 20;
+        Vector3 velocidade = new Vector3(velocidadeEsquiva * 
+            direcaoHorizontal,
+            0, velocidadeRolamento);
+        jogadorRB.AddForce(velocidade * Time.deltaTime * constante);
 	}
     /// <summary>
     /// Metodo para tratar o swipe

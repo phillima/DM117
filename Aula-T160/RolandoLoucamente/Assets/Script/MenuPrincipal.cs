@@ -7,6 +7,12 @@ public class MenuPrincipal : MonoBehaviour {
 
     public void CarregaScene(string nomeScene) {
         SceneManager.LoadScene(nomeScene);
+
+#if UNITY_ADS
+        if (UnityAdControle.showsAds) {
+            UnityAdControle.ShowAd();
+        }
+#endif
     }
 
 }
