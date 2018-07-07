@@ -8,6 +8,10 @@ public class Obstaculo : MonoBehaviour {
     [SerializeField]
     float tempoReiniciar = 2.0f;
 
+    [SerializeField]
+    [Tooltip("Efeito de explosao do obstaculo")]
+    GameObject explosao;
+
     private void OnCollisionEnter(Collision collision) {
         
         //Verificar se foi o jogador/bola
@@ -15,23 +19,22 @@ public class Obstaculo : MonoBehaviour {
             GetComponent<JogadorControle>()) {
             Destroy(collision.gameObject);
             Invoke("ResetaJogo", tempoReiniciar);
-
         }
     }
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     void ResetaJogo() {
         //Reinicia o Level/Scene/Fase
         SceneManager.LoadScene(SceneManager.
                 GetActiveScene().name);
+    }
+
+    public void ObjetoTocado() {
+        if(explosao != null) {
+            //Cria o efeito da explosao
+            var particulas = Instantiate(explosao, transform.position,
+                Quaternion.identity);
+            Destroy(particulas, 1.0f);
+        }
+        //Destroi o obstaculo
+        Destroy(gameObject);
     }
 }

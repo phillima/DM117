@@ -109,3 +109,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempoReiniciar: 2
+  explosao: {fileID: 1705090727626718, guid: c08c83c508d9a774bb189ba9dbafb86e, type: 2}

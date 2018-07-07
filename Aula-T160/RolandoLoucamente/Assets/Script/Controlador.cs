@@ -22,8 +22,8 @@ public class Controlador : MonoBehaviour {
 
     Quaternion proxTileRot;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 
         //Preparando o tile inicial
         proxTilePos = pontoInicial;
@@ -32,7 +32,6 @@ public class Controlador : MonoBehaviour {
         for (int i = 0; i < numIniTiles; i++) {
             SpawnProxTile();
         }
-
 	}
 
     public void SpawnProxTile(bool temObs = true) {
