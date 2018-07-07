@@ -63,6 +63,7 @@
     <Compile Include="Assets\Script\Controlador.cs" />
     <Compile Include="Assets\Script\FimTile.cs" />
     <Compile Include="Assets\Script\JogadorControle.cs" />
+    <Compile Include="Assets\Script\MenuPrincipal.cs" />
     <Compile Include="Assets\Script\Obstaculo.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Malfurion/DM1171/DM117/Aula-T160/RolandoLoucamente/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
