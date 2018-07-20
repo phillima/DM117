@@ -61,6 +61,7 @@ public class ObsComp : MonoBehaviour {
         if (botaoContinue) {
 #if UNITY_ADS
             //Se o botao continue for clicado, iremos tocar o anúncio
+            print("Chamou corotina");
             StartCoroutine(ShowContinue(botaoContinue));
 #else
             //Se nao existe add, nao precisa mostrar o botao Continue
@@ -109,7 +110,8 @@ public class ObsComp : MonoBehaviour {
             if (UnityAdControle.proxTempoReward.HasValue &&
             (DateTime.Now < UnityAdControle.proxTempoReward.Value)) {
                 botaoContinue.interactable = false;
-
+                print("Aqui" + Time.timeScale);
+                print(MenuPauseComp.pausado);
                 TimeSpan restante = UnityAdControle.proxTempoReward.Value - 
                     DateTime.Now;
 
