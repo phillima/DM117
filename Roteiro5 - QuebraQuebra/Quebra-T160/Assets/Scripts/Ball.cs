@@ -8,6 +8,8 @@ public class Ball : MonoBehaviour {
     Rigidbody2D ballRB;
     //Referncia para a plataforma (paddle)
     Paddle paddle;
+    //Referencia para a cruz
+    CrossHair crossHair;
 
     //Posicao inicial da bola
     Vector3 offset = new Vector3(0f,0.6f,0f);
@@ -17,6 +19,8 @@ public class Ball : MonoBehaviour {
         ballRB = GetComponent<Rigidbody2D>();
         ballRB.isKinematic = true;
         paddle = FindObjectOfType<Paddle>();
+        crossHair = FindObjectOfType<CrossHair>();
+
 	}
 	
 	// Update is called once per frame
@@ -37,8 +41,12 @@ public class Ball : MonoBehaviour {
 
     //Metodo para lancar a bola
     void LaunchBall() {
+        Vector2 ballDirection =
+                (crossHair.transform.position -
+                 transform.position);
+        ballDirection.Normalize();
         ballRB.isKinematic = false;
-        ballRB.AddForce(Vector2.up * 15,ForceMode2D.Impulse);
+        ballRB.AddForce(ballDirection * 15,ForceMode2D.Impulse);
         LevelControl.hasGameStarted = true;
     }
 }
