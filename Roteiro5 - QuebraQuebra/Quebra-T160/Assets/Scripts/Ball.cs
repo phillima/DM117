@@ -10,17 +10,30 @@ public class Ball : MonoBehaviour {
     Paddle paddle;
     //Referencia para a cruz
     CrossHair crossHair;
+    //Referencia para o audio source
+    AudioSource ballAudioSource;
 
     //Posicao inicial da bola
     Vector3 offset = new Vector3(0f,0.6f,0f);
 
 	// Use this for initialization
 	void Start () {
+        ballAudioSource = GetComponent<AudioSource>();
         ballRB = GetComponent<Rigidbody2D>();
         ballRB.isKinematic = true;
         paddle = FindObjectOfType<Paddle>();
         crossHair = FindObjectOfType<CrossHair>();
+        
 
+        /*print("Adesivo para pessoa numero: " + 
+                Random.Range(1,20));
+        print("Adesivo para pessoa numero: " +
+                Random.Range(1, 20));
+        print("Adesivo para pessoa numero: " +
+                Random.Range(1, 20));
+        print("Adesivo para pessoa numero: " +
+                Random.Range(1, 20));
+        print(Random.Range(0, 2));*/
 	}
 	
 	// Update is called once per frame
@@ -48,5 +61,9 @@ public class Ball : MonoBehaviour {
         ballRB.isKinematic = false;
         ballRB.AddForce(ballDirection * 15,ForceMode2D.Impulse);
         LevelControl.hasGameStarted = true;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision) {
+        ballAudioSource.Play();
     }
 }
