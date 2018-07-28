@@ -9,6 +9,8 @@ public class Player : MonoBehaviour {
     float playerRunSpeed;
     [SerializeField]
     float playerJump;
+    [SerializeField]
+    float playerClimbSpeed;
 
     //constantes
     const string ANIM_RUNNING = "PlayerRunning";
@@ -23,8 +25,10 @@ public class Player : MonoBehaviour {
     
     //Variaves de controle
     float playerXDir;
-
+    float playerYDir;
+    bool playerOnLadder = false;
     float playerJumpKey = -1f;
+    float playerGravity;
 
     // Use this for initialization
     void Start() {
@@ -32,12 +36,14 @@ public class Player : MonoBehaviour {
         playerAnimator = GetComponent<Animator>();
         playerCapCollider = 
             GetComponent<CapsuleCollider2D>();
+        playerGravity = playerRB.gravityScale;
     }
 
     //Usaremos esse metodo
     //para pegar inputs
 	void Update () {
         playerXDir = Input.GetAxis("Horizontal");
+        playerYDir = Input.GetAxis("Vertical");
 
         if (Input.GetButtonDown("Jump") &&
             playerCapCollider.IsTouchingLayers(
@@ -54,6 +60,7 @@ public class Player : MonoBehaviour {
             playerJumpKey = -1f;
             Jump();
         }
+        Climb();
     }
 
     void Run() {
@@ -84,5 +91,52 @@ public class Player : MonoBehaviour {
             new Vector2(playerRB.velocity.x,
             playerJump);
     }
+    //Metodo para subir/descer a escada
+    void Climb() {
+        //Verifica se player esta na escada
+        if (playerOnLadder) {
+            if(playerYDir != 0) {
+                playerRB.velocity =
+                    new Vector2(
+                    playerRB.velocity.x,
+                    playerYDir * playerClimbSpeed);
+                playerAnimator.speed = 1.0f;
+            } else {
+                playerAnimator.speed = 0.0f;
+                playerRB.velocity =
+                    new Vector2(
+                        playerRB.velocity.x,
+                        0.0f);
+            }
+        }
+    }
+    //Vamos usar esse metodo
+    //para iniciar o processo de climb
+    void OnTriggerStay2D(Collider2D collision) {
+        if (collision.CompareTag("Ladder")) {
+            //Verifica se houve movimento vertical
+            if ((!playerCapCollider.IsTouchingLayers(
+                    LayerMask.GetMask("Foreground")) ||
+                    playerYDir != 0) && !playerOnLadder) {
+                playerAnimator.
+                    SetBool("PlayerClimb", true);
+                playerAnimator.speed = 0f;
+                playerRB.gravityScale = 0;
+                playerOnLadder = true;
+            }
+        } 
+    }
+    //Metodo para tratar a saida da escada
+    void OnTriggerExit2D(Collider2D collision) {
+        if (collision.CompareTag("Ladder")) {
+            playerRB.gravityScale = playerGravity;
+            playerAnimator.SetBool("PlayerClimb",
+                false);
+            playerAnimator.speed = 1.0f;
+            playerOnLadder = false;
+        }
+    }
+
+
 
 }
