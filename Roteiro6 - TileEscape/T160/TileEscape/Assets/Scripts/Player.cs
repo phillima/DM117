@@ -29,6 +29,7 @@ public class Player : MonoBehaviour {
     bool playerOnLadder = false;
     float playerJumpKey = -1f;
     float playerGravity;
+    bool playerDead = false;
 
     // Use this for initialization
     void Start() {
@@ -55,6 +56,9 @@ public class Player : MonoBehaviour {
     //Usaremos o fixed para
     //atualizacoes com relacao a fisica
     void FixedUpdate() {
+        if (playerDead) {
+            return;
+        }
         Run();
         if(Time.time < playerJumpKey) {
             playerJumpKey = -1f;
@@ -134,6 +138,18 @@ public class Player : MonoBehaviour {
                 false);
             playerAnimator.speed = 1.0f;
             playerOnLadder = false;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.GetComponent<Enemy>()) {
+            playerDead = true;
+            playerAnimator.SetTrigger("PlayerDead");
+            playerRB.velocity =
+                new Vector2(-5.0f, 12f);//Pulo Dramatico
+            Physics2D.IgnoreLayerCollision(
+                LayerMask.NameToLayer("Player"),
+                LayerMask.NameToLayer("Enemy"));
         }
     }
 
