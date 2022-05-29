@@ -57,8 +57,6 @@ public class ControladorJogo : MonoBehaviour
         var novoTile = Instantiate(tile, proxTilepos, proxTileRot);
         // Verifica se ja podemos criar Tiles com obstaculos
         
-        print("Aqui constroi");
-
         // Detectar qual o local do proximo tile
         var proxTile = novoTile.Find("PontoSpawn");
         proxTilepos = proxTile.position;
@@ -96,8 +94,6 @@ public class ControladorJogo : MonoBehaviour
             // um parent
             novoObs.SetParent(pontoSpawn.transform);
         }
-
-        print("to aqui {}" + pontosObstaculo);
     }
 
 

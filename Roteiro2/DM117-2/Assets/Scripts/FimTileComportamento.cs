@@ -34,7 +34,6 @@ public class FimTileComportamento : MonoBehaviour
             // Destroy(this, tempoDestruir);
             // E agora destroi esse TileBasico
             Destroy(transform.parent.gameObject, tempoDestruir);
-            print("aqui destroi");
         }
     }
 }
