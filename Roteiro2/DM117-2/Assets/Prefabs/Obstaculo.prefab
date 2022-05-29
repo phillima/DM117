@@ -110,4 +110,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c81e6fcc90a1a41ab597acbc60c534c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosao: {fileID: 5060781014894079689, guid: ec0b0e5b757eb3ff9b848fd73c21fa46, type: 3}
   tempoEspera: 2

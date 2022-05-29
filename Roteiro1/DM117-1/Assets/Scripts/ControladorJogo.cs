@@ -25,12 +25,12 @@ public class ControladorJogo : MonoBehaviour
     /// <summary>
     /// Local para gerar o proximo tile
     /// </summary>
-    private Vector3 _proxTilepos;
+    private Vector3 proxTilepos;
 
     /// <summary>
     /// Local para spawn do proximo Tile
     /// </summary>
-    private Quaternion _proxTileRot;
+    private Quaternion proxTileRot;
     
     [Tooltip("Numeros de Tile sem obstaculos")]
     [Range(1,4)]
@@ -41,8 +41,8 @@ public class ControladorJogo : MonoBehaviour
     void Start()
     {
         // Preparando o ponto inicial 
-        _proxTilepos = pontoInicial;
-        _proxTileRot = Quaternion.identity;
+        proxTilepos = pontoInicial;
+        proxTileRot = Quaternion.identity;
 
         for (int i = 0; i < numSpawnIni; i++)
         {
@@ -54,15 +54,15 @@ public class ControladorJogo : MonoBehaviour
     // Update is called once per frame
     public void SpawnProxTile(bool spawnObstaculos = true)
     {
-        var novoTile = Instantiate(tile, _proxTilepos, _proxTileRot);
+        var novoTile = Instantiate(tile, proxTilepos, proxTileRot);
         // Verifica se ja podemos criar Tiles com obstaculos
         
         print("Aqui constroi");
 
         // Detectar qual o local do proximo tile
         var proxTile = novoTile.Find("PontoSpawn");
-        _proxTilepos = proxTile.position;
-        _proxTileRot = proxTile.rotation;
+        proxTilepos = proxTile.position;
+        proxTileRot = proxTile.rotation;
         
         if (!spawnObstaculos)
             return;
