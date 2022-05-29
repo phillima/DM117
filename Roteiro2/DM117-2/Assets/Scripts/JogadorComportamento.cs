@@ -15,7 +15,7 @@ public class JogadorComportamento : MonoBehaviour
         Acelerometro,
         Touch
     }
-
+    
     public tipoMovHorizontal movHorizontal = tipoMovHorizontal.Acelerometro;
     /// <summary>
     /// Referência para o componente RigidBody
@@ -63,6 +63,7 @@ public class JogadorComportamento : MonoBehaviour
         {
             // Aplicar a velocidade horizontal
             velocidadeHorizontal = CalculaMovimento(Input.mousePosition);
+            tocarObjetos(Input.mousePosition);
         }
     
 // Verifica se estamos no mobile se n estivermos o codigo fica cinza
@@ -148,10 +149,10 @@ public class JogadorComportamento : MonoBehaviour
     /// Metodo para verificar se o objeto foi tocado
     /// </summary>
     /// <param name="touch">Objeto que foi tocado nesse frame</param>
-    private static void tocarObjetos(Touch touch)
+    private static void tocarObjetos(Vector3 pos)
     {
         // convertemos a posicao do touch (screen space) para um Ray
-        Ray touchRay = Camera.main.ScreenPointToRay(touch.position);
+        Ray touchRay = Camera.main.ScreenPointToRay(pos);
         
         // Objeto que ira salvar as informações de um possivel objeto q foi tocado
         RaycastHit hit;
