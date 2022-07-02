@@ -90,7 +90,7 @@ public class JogadorComportamento : MonoBehaviour
                 swipeTeleport(touch);
                 
                 // Verifica se o touch atingiu algum objeto
-                tocarObjetos(touch);
+                tocarObjetos(touch.position);
             }
         }
 
